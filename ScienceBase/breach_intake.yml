@@ -1,0 +1,22 @@
+sources:
+  breach-hdf5-sb:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Matanzas Breach Simulation in NetCDF4/HDF5 format'
+    args:
+      urlpath: "reference://"
+      storage_options:
+        target_options:
+          anon: true
+        fo: 's3://prod-is-usgs-sb-prod-publish/609bf69ed34ea221ce39b261/breach_matanzas_ReferenceFileSystem.json'
+        remote_options:
+          anon: true
+        remote_protocol: s3
+
+  breach-zarr-esip:
+    driver: zarr
+    description: "Matanzas Breach Simulation in Zarr format"
+    args:
+      urlpath: 's3://esip-qhub/usgs/rsignell/zarr/breach_matanzas'
+      consolidated: true
+      storage_options:
+        requester_pays: true

@@ -1,0 +1,12 @@
+name: holoviz
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - datashader
+  - geoviews
+  - hvplot
+  - ipykernel
+  - pandas
+  - xarray
+  - fsspec
