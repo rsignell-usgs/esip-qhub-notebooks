@@ -1,0 +1,9 @@
+name: hrrr-latest
+image: ghcr.io/peterm790/kerchunk:latest
+command: 
+  - papermill
+  - 02_kerchunk-allyears-kbatch.ipynb
+code: 02_kerchunk-allyears-kbatch.ipynb
+env: 
+  AWS_ACCESS_KEY_ID: "AKIARNNK42TEISVO2DOQ"
+  AWS_SECRET_ACCESS_KEY: "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"
